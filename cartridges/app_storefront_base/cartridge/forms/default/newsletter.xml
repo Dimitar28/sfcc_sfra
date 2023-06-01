@@ -39,6 +39,7 @@
 			<!-- regular US states -->
 			<option optionid="Male" 	label="Male" 		value="Male"/>
 			<option optionid="Female" 	label="Female" 		value="Female"/>
+			<option optionid="Other" 	label="Other" 		value="Other"/>
 			<!-- Other -->
 		</options>
 	</field>
