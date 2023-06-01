@@ -9,12 +9,12 @@ module.exports.execute = function () {
 
     var file = new File(File.IMPEX + '/newsletter.csv');
     var fileWriter = new FileWriter(file);
-    var csvWriter = new CSVStreamWriter(fileWriter);
-    csvWriter.writeNext(['FirstName', 'Lastname', 'Email', 'Gender']);
+    var CVSWriter = new CSVStreamWriter(fileWriter);
+    CVSWriter.writeNext(['FirstName', 'Lastname', 'Email', 'Gender']);
     try {
         while (newsletterObjects.hasNext()) {
             var newsletterObject = newsletterObjects.next();
-            csvWriter.writeNext([
+            CVSWriter.writeNext([
                 newsletterObject.custom.name,
                 newsletterObject.custom.lastname,
                 newsletterObject.custom.email,
