@@ -1,0 +1,5 @@
+<div class="container">
+ <h1 class="text-center mb-4">Deathstar Info</h1>
+    <h2 class="text-center  mb-5"> <b> Name </b>: ${pdict.deathstarfact.name}, <b> manufacturer </b>: ${pdict.deathstarfact.manufacturer}, <b> starship class</b>: ${pdict.deathstarfact.starship_class}</h2>
+   
+</div>

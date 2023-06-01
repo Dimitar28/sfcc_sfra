@@ -1,0 +1,34 @@
+<isdecorate template="common/layout/page">
+    
+
+<p> Hello <isprint value="${pdict.welcomeMsg}" encoding="on" /></p>
+<isscript>
+    let items = ['one','two','three']
+</isscript>
+<isloop items="${items}" var="subitem" status="index">
+<isif condition="${index.first}">
+     <p><strong> ${subitem}</strong></p>
+<iselse/>
+     <p> ${subitem}</p>
+</isif>
+
+</isloop>
+<isset name="changeScope" value="1" scope="pdict" />
+<isprint value="${new Date().toLocaleString()}" encoding="on" />
+<isinclude url="${URLUtils.url('Telerik-Include')}" sf-toolkit="on" />
+
+
+
+<isif condition="${!session.custom.name}">
+    <isscript>
+        session.custom.name = 1;
+    </isscript>
+<iselseif condition="${session.custom.name == 1}">
+    <isscript>
+        session.custom.name++;
+    </isscript>
+</iselseif>
+</isif>
+<p>Session variable value: <isprint value="${session.custom.name}" /></p>
+
+</isdecorate>

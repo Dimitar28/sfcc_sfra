@@ -1,0 +1,71 @@
+<isdecorate template="common/layout/page">
+    <div class="hero slant-down account-image">
+        <h1 class="page-title">${Resource.msg('label.newsletter','forms',null)}</h1>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-8 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="${URLUtils.url('Newsletter-Save')}" class="edit-profile-form" method="POST" <isprint value="${pdict.newsletterForm.attributes}" encoding="off" />>
+
+
+    <div class="form-group
+        <isif condition="${pdict.newsletterForm.firstname.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="firstname">
+            <isprint value="${pdict.newsletterForm.firstname.label}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="firstName"
+            <isprint value="${pdict.newsletterForm.firstname.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${pdict.newsletterForm.lastname.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="lastname">
+            <isprint value="${pdict.newsletterForm.lastname.label}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="lastname"
+            <isprint value="${pdict.newsletterForm.lastname.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+    </div>
+
+<div class="form-group
+        <isif condition="${pdict.newsletterForm.email.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="email">
+            <isprint value="${pdict.newsletterForm.email.label}" encoding="htmlcontent" />
+        </label>
+        <input type="email" class="form-control" id="email"
+            <isprint value="${pdict.newsletterForm.email.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+    </div>
+    
+<div class="form-group">
+    <label class="form-control-label" for="gender">
+        <isprint value="${pdict.newsletterForm.gender.label}" encoding="htmlcontent" />
+    </label>
+    <select class="form-control" id="gender" name="gender">
+        <isloop items="${pdict.newsletterForm.gender.options}" var="option">
+           <option id="${option.id}" value="${option.htmlValue}" <isif condition="${option.selected}">selected</isif>>${option.label || ' '}</option>
+        </isloop>
+    </select>
+    <div class="invalid-feedback"></div>
+</div>
+
+
+
+
+    <div class="row">
+        <div class="col">
+            <button type="submit" name="save" class="btn btn-save btn-block btn-primary">${Resource.msg('button.save','account',null)}</button>
+        </div>
+    </div>
+     <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+</form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>

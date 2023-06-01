@@ -1,0 +1,4 @@
+<isscript>
+    let customerPhone = customer.profile.phoneHome
+</isscript>
+<h1>Hello ${pdict.firstName} with email ${pdict.email} and ID ${pdict.ID}</h1>
