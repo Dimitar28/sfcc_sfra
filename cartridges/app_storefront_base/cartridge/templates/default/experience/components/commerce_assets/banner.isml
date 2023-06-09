@@ -1,0 +1,4 @@
+<div>
+    My banner
+</div>
+${pdict.bannerMessage}

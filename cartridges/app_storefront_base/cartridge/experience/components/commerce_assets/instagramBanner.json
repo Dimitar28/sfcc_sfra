@@ -1,0 +1,22 @@
+{
+    "name": "Instagram Baner",
+    "description": "An Instagram Baner.",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "InstagramIDConfig",
+            "name": "Banner Instagram Post Configuration",
+            "description": "You can define the url for the instagram post you want to display.",
+            "attribute_definitions": [
+                {
+                    "id": "instagramURL",
+                    "name": "Instagram Post URL",
+                    "description": "The URL for the needed Instagram Post",
+                    "type": "string",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

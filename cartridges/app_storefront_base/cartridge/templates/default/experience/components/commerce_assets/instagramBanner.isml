@@ -1,0 +1,4 @@
+<div class="text-center">
+    <iframe width="500" height="850" src='${pdict.bannerMessage}embed'>
+</iframe>
+</div>
