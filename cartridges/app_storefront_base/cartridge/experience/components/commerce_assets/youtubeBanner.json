@@ -1,0 +1,22 @@
+{
+    "name": "Youtube Baner",
+    "description": "A Youtube Baner.",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "YoutubeIDConfig",
+            "name": "Banner Youtube Video Configuration",
+            "description": "You can define the id for the youtube video you want to display.",
+            "attribute_definitions": [
+                {
+                    "id": "youtubeID",
+                    "name": "Youtube Video ID",
+                    "description": "The ID for the needed Youtube Video",
+                    "type": "string",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}
