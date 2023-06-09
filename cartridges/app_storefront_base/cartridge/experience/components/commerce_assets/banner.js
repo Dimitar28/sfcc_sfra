@@ -9,6 +9,6 @@ module.exports.render = function (context) {
     // add parameters to model as required for rendering based on the given context (dw.experience.ComponentScriptContext):
     // * context.component (dw.experience.Component)
     // * context.content (dw.util.Map)
-    // * model.bannerMessage = context.content.alt;
+    model.bannerMessage = context.content.alt;
     return new Template('experience/components/commerce_assets/banner').render(model).text;
 };
