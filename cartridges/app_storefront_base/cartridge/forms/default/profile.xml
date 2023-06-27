@@ -64,7 +64,7 @@
 			range-error="error.message.100orless" 
 			type="string" />
 			
-			<field formid="country" label="label.input.country.profile" type="string" mandatory="true" binding="country" >
+			<field formid="country" label="label.input.country.profile" type="string" binding="country" >
 		<options>
 			<option optionid="" 	label="resource.select" 		value=""/>
 

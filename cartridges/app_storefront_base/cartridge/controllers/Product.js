@@ -20,18 +20,18 @@ var pageMetaData = require('*/cartridge/scripts/middleware/pageMetaData');
  * @property {String} info_selectforstock - Localized string for "Select Styles for Availability"
  */
 
-  /**
-  * Product-Show : This endpoint is called to show the details of the selected product
-  * @name Base/Product-Show
-  * @function
-  * @memberof Product
-  * @param {middleware} - cache.applyPromotionSensitiveCache
-  * @param {middleware} - consentTracking.consent
-  * @param {querystringparameter} - pid - Product ID
-  * @param {category} - non-sensitive
-  * @param {renders} - isml
-  * @param {serverfunction} - get
-  */
+/**
+* Product-Show : This endpoint is called to show the details of the selected product
+* @name Base/Product-Show
+* @function
+* @memberof Product
+* @param {middleware} - cache.applyPromotionSensitiveCache
+* @param {middleware} - consentTracking.consent
+* @param {querystringparameter} - pid - Product ID
+* @param {category} - non-sensitive
+* @param {renders} - isml
+* @param {serverfunction} - get
+*/
 server.get('Show', cache.applyPromotionSensitiveCache, consentTracking.consent, function (req, res, next) {
     var productHelper = require('*/cartridge/scripts/helpers/productHelpers');
     var showProductPageHelperResult = productHelper.showProductPage(req.querystring, req.pageMetaData);
@@ -285,7 +285,8 @@ server.get('ShowBonusProducts', function (req, res, next) {
                 product = ProductFactory.get({
                     pid: param,
                     pview: 'bonus',
-                    duuid: duuid });
+                    duuid: duuid
+                });
                 return product;
             });
         } else {

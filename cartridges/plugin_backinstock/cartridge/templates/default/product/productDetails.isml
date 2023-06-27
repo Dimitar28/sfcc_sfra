@@ -123,6 +123,8 @@
                             <!-- Cart and [Optionally] Apple Pay -->
                             <isinclude template="product/components/addToCartProduct" />
 
+                             <!-- Notify me when back in stock form modal for out-of-stock products -->
+                            <isinclude template="product/components/notifyFormModal" />
                         </div>
 
                         <!-- Social Sharing Icons -->

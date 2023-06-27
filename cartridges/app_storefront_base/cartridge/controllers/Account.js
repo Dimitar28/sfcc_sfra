@@ -436,6 +436,7 @@ server.post(
             email: profileForm.customer.email.value,
             confirmEmail: profileForm.customer.emailconfirm.value,
             interests: profileForm.customer.interests.value,
+            country: req.httpParameterMap.country.value,
             password: profileForm.login.password.value,
             profileForm: profileForm
         };
@@ -479,7 +480,7 @@ server.post(
                         profile.setEmail(formInfo.email);
                         profile.setPhoneHome(formInfo.phone);
                         profile.custom.interests = formInfo.interests
-                        profile.custom.country = req.httpParameterMap.country.value;
+                        profile.custom.country = formInfo.country;
                     });
 
                     // Send account edited email
