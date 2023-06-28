@@ -1,0 +1,37 @@
+ 
+  <div class="alert alert-success js-subscribe-success-message d-none" role="alert">
+                ${Resource.msg('form.submit.success.message', 'forms', null)}
+            </div>
+            <div class="alert alert-danger js-subscribe-error-message d-none" role="alert">
+                ${Resource.msg('form.submit.error.message', 'forms', null)}
+            </div>
+
+ <form action="${URLUtils.url('Twilio-Subscribe')}" class="edit-notification-form" method="POST" <isprint value="${pdict.notifyModalForm.attributes}" encoding="off" />>
+
+  
+  <div class="form-group
+        <isif condition="${pdict.notifyModalForm.phoneNumber.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="phoneNumber">
+            <isprint value="${pdict.notifyModalForm.phoneNumber.label}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="subscribe-product-form" 
+        placeholder="${Resource.msg('label.input.phone.placeholder', 'forms', null)}"
+        data-pattern-mismatch="${Resource.msg('form.error.message.phoneInputError', 'forms', null)}"
+            <isprint value="${pdict.notifyModalForm.phoneNumber.attributes}" encoding="off" /> >
+            
+        <div class="invalid-feedback" ></div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <button type="submit" name="save" value="save" class="btn btn-save btn-block btn-primary"><i class="fa fa-save"></i> ${Resource.msg('button.save','account',null)}</button>
+        </div>
+    </div>
+
+<input type="hidden" name="${pdict.productID}" value="${pdict.productID}" />
+
+     <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+
+     
+</form>
+

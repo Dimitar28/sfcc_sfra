@@ -1,0 +1,11 @@
+{
+    "step-types": {
+        "script-module-step": [
+            {
+                "@type-id": "custom.NotificationJob",
+                "description": "This job querys all custom objects with id =  'NotifyMeBackInStock'. Loops them and checks the product availability.  If the product is back in stock, makes a service call to Twilio API for all phone numbers stored in that custom objects.",
+                "module": "plugin_backinstock/cartridge/scripts/steps/NotificationJob"
+            }
+        ]
+    }
+}

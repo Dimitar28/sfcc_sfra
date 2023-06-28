@@ -1,0 +1,50 @@
+.form-group.required .form-control-label::before {
+    content: "*";
+    color: #c00;
+}
+
+/* form show button  */
+.notify-me-btn {
+    margin: 1rem 0 0 2rem;
+    background: linear-gradient(to right, rgb(247, 120, 120), rgb(156, 156, 255));
+    color: white;
+    transition: .3s all;
+
+    &:where(:hover, :focus) {
+        outline: 3px solid red;
+        outline-offset: 2px;
+    }
+}
+
+
+/* form   */
+.notificationModal[open] {
+    display: grid;
+    position: fixed !important;
+    padding: 1.5rem 1rem;
+
+    .modal-header {
+        margin-block: 2rem;
+    }
+
+    .closeModalBtn {
+        margin-top: 1.5rem;
+        background-color: firebrick;
+        color: white;
+        transition: .3s all;
+        padding: .3rem;
+        border-color: transparent;
+    }
+
+    .closeModalBtn:where(:hover, :focus) {
+        background-color: white;
+        border-color: firebrick;
+        color: firebrick;
+    }
+}
+
+.edit-notification-form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}

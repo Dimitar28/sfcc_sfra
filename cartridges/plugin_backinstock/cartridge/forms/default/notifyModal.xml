@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
+	
+		<field 
+			formid="phoneNumber"
+			label="label.input.phone.notifymodal"
+			mandatory="true"
+			regexp="^(\+359|0)\s?8(\d{2}\s\d{3}\d{3}|[789]\d{7})$"
+			missing-error="error.message.required"
+			parse-error="error.message.parse.phone.notifymodal.form"
+			type="string"/> 
+			
+</form>

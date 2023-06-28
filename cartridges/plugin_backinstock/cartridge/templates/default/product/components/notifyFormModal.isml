@@ -1,0 +1,18 @@
+
+<isif condition="${!product.available}">
+ <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+         assets.addJs('/js/form/notifyFormModal.js');
+          assets.addJs('/js/notifyFormValidation.js');
+       assets.addCss('/css/form/notifyFormModal.css');
+    </isscript>
+    
+    <button type="button" class="btn notify-me-btn" ><i class="fa fa-flag"></i>   ${Resource.msg('form.message.NotifyMeButtonText', 'forms', null)}</button>
+    </isif>
+
+        <dialog  class="notificationModal">
+     <h2 class="modal-header">${Resource.msg('form.message.NotifyMeModalHeader', 'forms', null)}</h2>
+       <isinclude url="${URLUtils.url('Twilio-Show')} " />
+       
+        <button class="closeModalBtn" ><i class="fa fa-times-circle"></i> ${Resource.msg('form.message.closeModalText', 'forms', null)}</button>
+        </dialog>
